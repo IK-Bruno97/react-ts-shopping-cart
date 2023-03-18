@@ -1,0 +1,73 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+.containe {
+    width: 100%;
+    height: 100vh;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-cente {
+    width: 100%;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    display: flex;
+    justify-content: center;
+}
+
+.custom-fiel {
+    font-size: 14px;
+    position: relative;
+    --field-padding: 12px;
+    border-top: 20px solid transparent;
+}
+
+.custom-fiel input {
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #f2f2f2;
+    padding: 12px;
+    border-radius: 3px;
+    width: 250px;
+    font-size: 14px;
+    padding: var(--field-padding);
+}
+
+
+.custom-fiel .placeholderr {
+    position: absolute;
+    left: 12px;
+    top: 22px;  
+    transform: translateY(-50%);
+    width: calc(100% - 24px);  
+    color: #aaa;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    left: var(--field-padding);
+    width: calc(100% - (var(--field-padding) * 2));
+    transition: top 0.3s ease,color 0.3s ease, font-size 0.3s ease;
+
+}
+
+.custom-fiel input:focus + .placeholderr{
+    top: -10px;
+    font-size: 10px;
+    color: #222;
+}
+
+
+.custom-fiel input:not(:placeholder-shown) + .placeholderr
+.custom-fiel input:focus + .placeholder {
+  top: -10px;
+  font-size: 10px;
+  color: #222;
+}
+/*.centerform{}

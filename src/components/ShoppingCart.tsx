@@ -9,11 +9,16 @@ type ShoppingCartProps = {
 }
 
 export function ShoppingCart({ isOpen }: ShoppingCartProps) {
+
   const { closeCart, cartItems } = useShoppingCart()
+
+  type username = string
+  const username = localStorage.getItem('username');
+
   return (
     <Offcanvas show={isOpen} onHide={closeCart} placement="end">
       <Offcanvas.Header closeButton>
-        <Offcanvas.Title>Cart</Offcanvas.Title>
+        <Offcanvas.Title>{username} Cart </Offcanvas.Title>
       </Offcanvas.Header>
       <Offcanvas.Body>
         <Stack gap={3}>
